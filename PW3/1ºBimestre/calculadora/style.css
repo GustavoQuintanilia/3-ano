@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*unidade que permite dimencionar elementos em relação a altura da janela do navegar(100vh = 100%)*/
+    background-color: #00CED1;
+    margin: 0;
+}
+
+.calculadora{
+    background-color: #000;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 420px;   
+}
+
+.display{
+    background-color: #222;
+    color: #fff;
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 70px;
+    text-align: right;
+}
+
+.buttons{
+    background-color: #D3D3D3;
+    display: grid; /*exibir os elemntos ordenados*/
+    grid-template-columns: repeat(4, 1fr); /*quatro colunas divididas igualmente para cada um dos elementos*/
+    gap: 10px; /*espaço entre os elementos*/
+}
+
+.button{
+    border: none;
+    border-radius: 10%;
+    padding: 20px;
+    font-size: 1.5rem;
+    cursor: pointer; /*indica que o cursor do mouse deve ser um "ponteiro" quando passar por cima deste elemento*/
+}
+
+.button.dark-gray{
+    background-color: #333;
+    color: #fff;
+}
+
+.button.orange{
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.button.light-gray{
+    background-color: #d3d3d3;
+    color: #000;
+}
+
+.button-wide{
+    grid-column: span 2;/*significa que o elemento vai icupar duas colunas*/
+    border-radius: 50px;
+}
