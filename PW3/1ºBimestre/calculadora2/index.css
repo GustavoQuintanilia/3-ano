@@ -4,13 +4,14 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            background: linear-gradient(90deg, 	#48D1CC, #20B2AA, #008B8B);
+
         }
 
         /* Estilos da calculadora */
         .calculadora {
             width: 300px;
-            background: #f77014;
+            background: #438AFA;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -36,7 +37,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
             margin-top: 15px;
-            
+            font-weight: bold;
         }
 
         button {
@@ -61,6 +62,16 @@
             background: #5b7c8d;
         }
 
+        .operador{
+            background-color: #008B8B;
+        }
 
+        .operador1{
+            background-color: #7FFFD4;
+        }
+
+        .decimal{
+            background-color: #7FFFD4;
+        }
 
   
