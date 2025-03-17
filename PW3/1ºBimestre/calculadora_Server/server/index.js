@@ -8,6 +8,12 @@ var cors = require('cors')
 app.use(cors({
     origin: '*'
 }));
+app.use(
+    express.urlencoded({
+        extend: true
+    })
+
+)
 
 app.get('/', function (req, res) {
   const retorno = {
