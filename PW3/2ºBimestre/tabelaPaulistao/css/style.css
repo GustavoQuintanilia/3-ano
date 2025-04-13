@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table{
+    border: solid 2px #000;
+    margin-bottom: 20px;
+    width: 700px;
+    height: 300px;
+    border-collapse: collapse;
+    font-size: 15px;
+
+}
+
+tr{
+    border: solid 2px #000;
+}
+
+th{
+    border: solid 2px #000;
+    width: 90px;
+    height: 75px;
+}
+
+td{
+    border: solid 2px #000;
+    width: 90px;
+    height: 75px;
+}
