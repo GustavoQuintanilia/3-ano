@@ -1,0 +1,219 @@
+{
+    "dados_GrupoA": [
+        {
+            "classificao": "Corinthians",
+            "p": 27,
+            "j": 12, 							
+            "v": 8,
+            "e": 3,
+            "d": 1,
+            "gp": 20,
+            "gc": 13,
+            "sg": 7,
+            "%": 75,
+            "ult_Jogos": 1
+        },
+        {
+            "classificao": "Mirassol",
+            "p": 16, 								
+            "j": 12,
+            "v": 5,
+            "e": 1,
+            "d": 6,
+            "gp": 21,
+            "gc": 21,
+            "sg": 0,
+            "%": 44,
+            "ult_Jogos": 2
+        },
+        {
+            "classificao": "Botafogo-SP",
+            "p": 11,
+            "j": 12,
+            "v": 2,
+            "e": 5,
+            "d": 5,
+            "gp": 8,
+            "gc": 13,
+            "sg": -5,
+            "%": 30,
+            "ult_Jogos": 3
+        },
+        {
+            "classificao": "Inter de Limeira",
+            "p": 7,
+            "j": 12,
+            "v": 0,
+            "e": 7,
+            "d": 5,
+            "gp": 9,
+            "gc": 19,
+            "sg": -10,
+            "%": 19,
+            "ult_Jogos": 4
+        }
+    ],
+    "dados_GrupoB": [
+        {
+            "classificao": "Santos",
+            "p": 18,
+            "j": 12,
+            "v": 5,
+            "e": 3,
+            "d": 4,
+            "gp": 20,
+            "gc": 14,
+            "sg": 6,
+            "%": 50,
+            "ult_Jogos": 5
+        },
+        {
+            "classificao": "Bragantino",
+            "p": 17,
+            "j": 12,
+            "v": 5,
+            "e": 2,
+            "d": 5,
+            "gp": 14,
+            "gc": 13,
+            "sg": 1,
+            "%": 47,
+            "ult_Jogos": 6
+        },
+        {
+            "classificao": "Guarani",
+            "p": 13,
+            "j": 12,
+            "v": 3,
+            "e": 4,
+            "d": 5,
+            "gp": 14,
+            "gc": 14,
+            "sg": 0,
+            "%": 36,
+            "ult_Jogos": 7
+        },
+        {
+            "classificao": "Portuguesa",
+            "p": 13,
+            "j": 12,
+            "v": 2,
+            "e": 7,
+            "d": 3,
+            "gp": 15,
+            "gc": 16,
+            "sg": -1,
+            "%": 36,
+            "ult_Jogos": 8
+        }
+    ],
+    "dados_GrupoC": [
+        {
+            "classificao": "São Paulo",
+            "p": 19,
+            "j": 12,
+            "v": 5,
+            "e": 4,
+            "d": 3,
+            "gp": 18,
+            "gc": 13,
+            "sg": 5,
+            "%": 52,
+            "ult_Jogos": 9
+        },
+        {
+            "classificao": "Novorizontino",
+            "p": 18,
+            "j": 12,
+            "v": 4,
+            "e": 6,
+            "d": 2,
+            "gp": 13,
+            "gc": 11,
+            "sg": 2,
+            "%": 50,
+            "ult_Jogos": 10
+        },
+        {
+            "classificao": "Noroeste",
+            "p": 8,
+            "j": 12,
+            "v": 1,
+            "e": 5,
+            "d": 6,
+            "gp": 12,
+            "gc": 19,
+            "sg": -7,
+            "%": 22,
+            "ult_Jogos": 11
+        },
+        {
+            "classificao": "Água Santa",
+            "p": 7,
+            "j": 12,
+            "v": 1,
+            "e": 4,
+            "d": 7,
+            "gp": 10,
+            "gc": 23,
+            "sg": -13,
+            "%": 19,
+            "ult_Jogos": 12
+        }
+    ],
+    "dados_GrupoD": [
+        {
+            "classificao": "São Bernardo",
+            "p": 23,
+            "j": 12,
+            "v": 7,
+            "e": 2,
+            "d": 3,
+            "gp": 19,
+            "gc": 16,
+            "sg": 3,
+            "%": 63,
+            "ult_Jogos": 13
+        },
+        {
+            "classificao": "Palmeiras",
+            "p": 23,
+            "j": 12,
+            "v": 6,
+            "e": 5,
+            "d": 1,
+            "gp": 21,
+            "gc": 10,
+            "sg": 11,
+            "%": 63,
+            "ult_Jogos": 14
+        },
+        {
+            "classificao": "Ponte Preta",
+            "p": 22,
+            "j": 12,
+            "v": 6,
+            "e": 4,
+            "d": 2,
+            "gp": 12,
+            "gc": 8,
+            "sg": 4,
+            "%": 61,
+            "ult_Jogos": 15
+        },
+        {
+            "classificao": "Velo Clube",
+            "p": 13,
+            "j": 12,
+            "v": 3,
+            "e": 4,
+            "d": 5,
+            "gp": 13,
+            "gc": 16,
+            "sg": -3,
+            "%": 36,
+            "ult_Jogos": 16
+        }
+    ]
+}
+
