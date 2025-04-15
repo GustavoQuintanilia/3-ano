@@ -1,6 +1,23 @@
-import dadosTabelas from './dadosTabelas.json';
+import dadosTabelas from './dadosTabelas.js';
 
-let grupoA = document.querySelector('.grupoA')
+let tbody = document.querySelector('tbody')
+// let grupoB = document.querySelector('.grupoB')
+// let grupoC = document.querySelector('.grupoC')
+// let grupoD = document.querySelector('.grupoD')
+
+tbody.innerHTML = "";
+
+dadosTabelas.forEach(time =>{
+    const tr = document.createElement('tr');
+
+    const tdClassificacao = document.createElement('td');
+    tdClassificacao.textContent = time.classificacao;
+
+    tr.appendChild(tdClassificacao);
+
+    tbody.appendChild(tr);
+})
+
 
 
 // olá, chat por favor transforme os dados: "12 0 7 5 9 19 -10 19"
