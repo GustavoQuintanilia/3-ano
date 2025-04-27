@@ -22,7 +22,7 @@ h1{
     padding: 5px;
 }
 
-div{
+.titulo2{
     background-color: #D3D3D3;
     height: 50px;
     
@@ -35,14 +35,18 @@ h2{
 
 /*corpo*/
 
+.corpo{
+    padding-left: 25%;
+    padding-right: 25%;
+}
 table{
     border: solid 2px #000;
     margin-bottom: 20px;
-    width: 700px;
+    width: 750px;
     height: 300px;
+    border-radius: 20%;
     border-collapse: collapse;
     font-size: 15px;
-
 }
 
 tr{
@@ -51,12 +55,22 @@ tr{
 
 th{
     border: solid 2px #000;
-    width: 90px;
+    width: 100px;
     height: 75px;
+    background-color: #32CD32;
 }
 
 td{
     border: solid 2px #000;
     width: 90px;
     height: 75px;
+}
+
+/*Footer*/
+
+footer{
+    background-color: #32CD32;
+    font-size: 20px;
+    height: 50px;
+    padding: 15px;
 }
