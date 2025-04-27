@@ -1,80 +1,47 @@
-import dadosTabelas from './dadosTabelas.js';
+import { time } from './dadosTabelas.js';
 
-let tbody = document.querySelector('tbody')
-// let grupoB = document.querySelector('.grupoB')
-// let grupoC = document.querySelector('.grupoC')
-// let grupoD = document.querySelector('.grupoD')
-
-tbody.innerHTML = "";
-
-dadosTabelas.forEach(time =>{
-    const tr = document.createElement('tr');
-
-    const tdClassificacao = document.createElement('td');
-    tdClassificacao.textContent = time.classificacao;
-
-    tr.appendChild(tdClassificacao);
-
-    tbody.appendChild(tr);
-})
+// Selecionar todas as Trs da tabela
+let trs = document.querySelectorAll("tr")
 
 
+//Contar quantas linhas foram preenchidas
+let contLinhas = 0;
 
-// olá, chat por favor transforme os dados: "12 0 7 5 9 19 -10 19"
-// em um código de vetor de json, com os seguintes campos
-// "j":,"v":,"e":,"d":,"gp":,"gc":,"sg":,"%":,.
+for (let index = 1; index < trs.length; index++) {
 
-// "dados_GrupoB": [
-    //     {
-    //         "classificao":,
-    //         "p": ,
-    //         "j":,
-    //         "v":,
-    //         "e":,
-    //         "d":,
-    //         "gp":,
-    //         "gc":,
-    //         "sg":,
-    //         "%":,
-    //         "ult_Jogos":
-    //     },
-    //     {
-    //         "classificao": "",
-    //         "p":,
-    //         "j":,
-    //         "v":,
-    //         "e":,
-    //         "d":,
-    //         "gp":,
-    //         "gc":,
-    //         "sg":,
-    //         "%":,
-    //         "ult_Jogos":
-    //     },
-    //     {
-    //         "classificao": "",
-    //         "p":,
-    //         "j":,
-    //         "v":,
-    //         "e":,
-    //         "d":,
-    //         "gp":,
-    //         "gc":,
-    //         "sg":,
-    //         "%":,
-    //         "ult_Jogos":
-    //     },
-    //     {
-    //         "classificao": "",
-    //         "p":,
-    //         "j":,
-    //         "v":,
-    //         "e":,
-    //         "d":,
-    //         "gp":,
-    //         "gc":,
-    //         "sg":,
-    //         "%":,
-    //         "ult_Jogos":
-    //     }
-    // ]
+    let tr = trs[index];
+
+    tr = criarFilhos(tr)
+
+    let filhos = tr.children;
+    let vetor = Array. from(filhos);
+
+    editarFilhos(vetor, (index - 1), time);
+
+    contLinhas++;
+    if (contLinhas > 0 && contLinhas % 4 === 0) {
+        index+= 1;
+    }
+}
+
+function editarFilhos(filhos, index, time){
+    filhos[0].textContent = time[index].classificacao
+    filhos[1].textContent = time[index].p
+    filhos[2].textContent = time[index].j
+    filhos[3].textContent = time[index].v
+    filhos[4].textContent = time[index].e
+    filhos[5].textContent = time[index].d
+    filhos[6].textContent = time[index].gp
+    filhos[7].textContent = time[index].gc
+    filhos[8].textContent = time[index].sg
+    filhos[9].textContent = time[index].porcentagem
+    filhos[10].textContent = time[index].ult_Jogos
+}
+
+
+function criarFilhos(tr){
+    let novaTD = document.createElement('td')
+    tr.appendChild(novaTD)
+    return tr
+   
+}

@@ -15,7 +15,6 @@ const time =
             porcentagem: 75,
             ult_Jogos: 1
         },
-
         {
             classificacao: "Mirassol",
             p: 16, 								
@@ -216,6 +215,6 @@ const time =
         }
 
     ]
-export default time;
 
+    export {time}
 
