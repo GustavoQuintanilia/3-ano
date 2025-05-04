@@ -3,7 +3,8 @@ const time =
     [
         //grupoA
         {
-            classificacao: "Corinthians",
+            classificacao: 1,
+            time: "Corinthians",
             p: 27,
             j: 12, 							
             v: 8,
@@ -12,11 +13,11 @@ const time =
             gp: 20,
             gc: 13,
             sg: 7,
-            porcentagem: 75,
-            ult_Jogos: 1
+            porcentagem: 75
         },
         {
-            classificacao: "Mirassol",
+            classificacao: 2,
+            time: "Mirassol",
             p: 16, 								
             j: 12,
             v: 5,
@@ -25,11 +26,11 @@ const time =
             gp: 21,
             gc: 21,
             sg: 0,
-            porcentagem: 44,
-            ult_Jogos: 2
+            porcentagem: 44
         },
         {
-            classificacao: "Botafogo-SP",
+            classificacao: 3,
+            time: "Botafogo-SP",
             p: 11,
             j: 12,
             v: 2,
@@ -38,11 +39,11 @@ const time =
             gp: 8,
             gc: 13,
             sg: -5,
-            porcentagem: 30,
-            ult_Jogos: 3
+            porcentagem: 30
         },
         {
-            classificacao: "Inter de Limeira",
+            classificacao: 4,
+            time: "Inter de Limeira",
             p: 7,
             j: 12,
             v: 0,
@@ -51,12 +52,12 @@ const time =
             gp: 9,
             gc: 19,
             sg: -10,
-            porcentagem: 19,
-            ult_Jogos: 4
+            porcentagem: 19
         },
         //grupoB
         {
-            classificacao: "Santos",
+            classificacao: 1,
+            time: "Santos",
             p: 18,
             j: 12,
             v: 5,
@@ -65,11 +66,11 @@ const time =
             gp: 20,
             gc: 14,
             sg: 6,
-            porcentagem: 50,
-            ult_Jogos: 5
+            porcentagem: 50
         },
         {
-            classificacao: "Bragantino",
+            classificacao: 2,
+            time: "Bragantino",
             p: 17,
             j: 12,
             v: 5,
@@ -78,11 +79,11 @@ const time =
             gp: 14,
             gc: 13,
             sg: 1,
-            porcentagem: 47,
-            ult_Jogos: 6
+            porcentagem: 47
         },
         {
-            classificacao: "Guarani",
+            classificacao: 3,
+            time: "Guarani",
             p: 13,
             j: 12,
             v: 3,
@@ -91,11 +92,11 @@ const time =
             gp: 14,
             gc: 14,
             sg: 0,
-            porcentagem: 36,
-            ult_Jogos: 7
+            porcentagem: 36
         },
         {
-            classificacao: "Portuguesa",
+            classificacao: 4,
+            time: "Portuguesa",
             p: 13,
             j: 12,
             v: 2,
@@ -104,12 +105,12 @@ const time =
             gp: 15,
             gc: 16,
             sg: -1,
-            porcentagem: 36,
-            ult_Jogos: 8
+            porcentagem: 36
         },
         //grupoC
         {
-            classificacao: "São Paulo",
+            classificacao: 1,
+            time: "São Paulo",
             p: 19,
             j: 12,
             v: 5,
@@ -118,11 +119,11 @@ const time =
             gp: 18,
             gc: 13,
             sg: 5,
-            porcentagem: 52,
-            ult_Jogos: 9
+            porcentagem: 52
         },
         {
-            classificacao: "Novorizontino",
+            classificacao: 2,
+            time: "Novorizontino",
             p: 18,
             j: 12,
             v: 4,
@@ -131,11 +132,11 @@ const time =
             gp: 13,
             gc: 11,
             sg: 2,
-            porcentagem: 50,
-            ult_Jogos: 10
+            porcentagem: 50
         },
         {
-            classificacao: "Noroeste",
+            classificacao: 3,
+            time: "Noroeste",
             p: 8,
             j: 12,
             v: 1,
@@ -144,11 +145,11 @@ const time =
             gp: 12,
             gc: 19,
             sg: -7,
-            porcentagem: 22,
-            ult_Jogos: 11
+            porcentagem: 22
         },
         {
-            classificacao: "Água Santa",
+            classificacao: 4,
+            time: "Água Santa",
             p: 7,
             j: 12,
             v: 1,
@@ -157,12 +158,12 @@ const time =
             gp: 10,
             gc: 23,
             sg: -13,
-            porcentagem: 19,
-            ult_Jogos: 12
+            porcentagem: 19
         },
         //grupoD
         {
-            classificacao: "São Bernardo",
+            classificacao: 1,
+            time: "São Bernardo",
             p: 23,
             j: 12,
             v: 7,
@@ -171,11 +172,11 @@ const time =
             gp: 19,
             gc: 16,
             sg: 3,
-            porcentagem: 63,
-            ult_Jogos: 13
+            porcentagem: 63
         },
         {
-            classificacao: "Palmeiras",
+            classificacao: 2,
+            time: "Palmeiras",
             p: 23,
             j: 12,
             v: 6,
@@ -184,11 +185,11 @@ const time =
             gp: 21,
             gc: 10,
             sg: 11,
-            porcentagem: 63,
-            ult_Jogos: 14
+            porcentagem: 63
         },
         {
-            classificacao: "Ponte Preta",
+            classificacao: 3,
+            time: "Ponte Preta",
             p: 22,
             j: 12,
             v: 6,
@@ -197,11 +198,11 @@ const time =
             gp: 12,
             gc: 8,
             sg: 4,
-            porcentagem: 61,
-            ult_Jogos: 15
+            porcentagem: 61
         },
         {
-            classificacao: "Velo Clube",
+            classificacao: 4,
+            time: "Velo Clube",
             p: 13,
             j: 12,
             v: 3,
@@ -210,11 +211,10 @@ const time =
             gp: 13,
             gc: 16,
             sg: -3,
-            porcentagem: 36,
-            ult_Jogos: 16
+            porcentagem: 36
         }
 
     ]
 
-    export {time}
+    export {time};
 
