@@ -39,12 +39,19 @@ h2{
     padding-left: 25%;
     padding-right: 25%;
 }
+
+h3{
+    background-color: #C0C0C0;
+    height: 50%;
+    font-size: 30px;
+}
+
 table{
-    border: solid 2px #000;
-    margin-bottom: 20px;
-    width: 750px;
+    border: solid 5px #000;
+    border-top: none;
+    margin-bottom: 50px;
+    width: 756px;
     height: 300px;
-    border-radius: 20%;
     border-collapse: collapse;
     font-size: 15px;
 }
