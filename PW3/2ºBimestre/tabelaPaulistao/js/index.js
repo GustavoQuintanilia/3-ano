@@ -13,8 +13,6 @@ for (let index = 1; index < trs.length && pularLinhas < time.length; index++) {
         if(index >= trs.length) break;
         
     }
-    
-    
 
     let tr = trs[index];
 
