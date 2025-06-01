@@ -1,3 +1,8 @@
+// botões
+const limpar = document.querySelector('.limpar');
+const research = document.querySelector('.research');
+
+//campos
 const textCep = document.querySelector('#textCep');
 const cep = document.querySelector('#cep');
 const logradouro = document.querySelector('#logradouro');
@@ -14,8 +19,7 @@ const ddd = document.querySelector('#ddd');
 const siafi = document.querySelector('#siafi');
 
 //Controlando o que escrever no campo textCep
-textCep.addEventListener('keydown', async (event) => {
-    if(event.key === 'Enter'){
+async function pesquisarCep() {
         try {
             const cepValue = textCep.value.trim();
 
@@ -63,6 +67,37 @@ textCep.addEventListener('keydown', async (event) => {
                 textCep.value = '';
                 textCep.focus();
         }
+};
+
+// Fazer a pesuisa do cep
+textCep.addEventListener('keydown', async (event) => {
+    if(event.key === 'Enter'){
+        event.preventDefault(); // Não envia o formulário
+        await pesquisarCep();
     }
+});
+
+research.addEventListener('click', async() => {
+    await pesquisarCep();
+});
+
+//Botão limpar 
+limpar.addEventListener('click', () => {
+    textCep.value = '';
+    cep.value = '';
+    logradouro.value = '';
+    complemento.value = '';
+    unidade.value = '';
+    bairro.value = '';
+    localidade.value = '';
+    uf.value = '';
+    estado.value = '';
+    regiao.value = '';
+    ibge.value = '';
+    gia.value = '';
+    ddd.value = '';
+    siafi.value = '';
+
+    textCep.focus();
 });
 
