@@ -34,7 +34,7 @@ async function pesquisarCep() {
                  throw new Error('Digite apenas números neste campo!');
             }
 
-            //Mensagem de erro para ultrapassagem de caracteres
+            //Mensagem de erro para o caso de não ter os 8 caracteres obrigatórios
             if(!tamanhoCep){
                 throw new Error('O CEP tem que ter 8 caracteres!');
             }
@@ -69,7 +69,7 @@ async function pesquisarCep() {
         }
 };
 
-// Fazer a pesuisa do cep
+// Fazer a pesquisa do CEP
 textCep.addEventListener('keydown', async (event) => {
     if(event.key === 'Enter'){
         event.preventDefault(); // Não envia o formulário
