@@ -22,6 +22,24 @@ const {atualizarEndereco} = require('./src/DAO/endereco/atualizar_Endereco.js')
 const {atualizarEnderecoNumero} = require('./src/DAO/endereco/atualizarEndereco_Numero.js')
 const {deletarEndereco} = require('./src/DAO/endereco/deletar_Endereco.js')
 
+//----------- CONEXÃO - tbl_itempedido ----------------
+const {buscarItempedido, buscarItempedidoId} = require('./src/DAO/itempedido/buscar_Itempedido.js')
+const {incluirItempedido} = require('./src/DAO/itempedido/inserir_Itempedido.js')
+const {atualizarItempedido} = require('./src/DAO/itempedido/atualizar_Itempedido.js')
+const {atualizarItempedidoQnt} = require('./src/DAO/itempedido/atualizarItempedido_Qnt.js')
+const {deletarItempedido} = require('./src/DAO/itempedido/deletar_Itempedido.js')
+
+//----------- CONEXÃO - tbl_pedido ----------------
+//Olha em baixo
+const {buscarPedido, buscarPedidoNumero} = require('./src/DAO/pedido/buscar_pedido.js') 
+const {incluirPedido} = require('./src/DAO/pedido/inserir_Pedido.js')
+const {atualizarPedido} = require('./src/DAO/pedido/atualizar_Pedido.js')
+const {atualizarPedidoData} = require('./src/DAO/pedido/atualizarPedido_Data.js')
+const {deletarPedido} = require('./src/DAO/pedido/deletar_Pedido.js')
+
+//----------- CONEXÃO - tbl_produtos ----------------
+const {buscarProduto, buscarProdutoCodigo} = require('./src/DAO/produtos/buscar_Produto.js')
+const {incluirProdutos} = require('./src/DAO/produtos/inserir_Produto.js')
 
 const {conexao, closeConexao, testarConexao} = require('./src/DAO/conexao.js')
 
@@ -180,6 +198,119 @@ app.delete('/firma/1.0.0/endereco/:id', async (req, res) => {
     const id = req.params.id;
     const results = await deletarEndereco(id);
     res.json(results);
+});
+
+//-----------tbl_itempedido---------------------
+//  ---- GET ----
+app.get('/firma/1.0.0/itempedido', async (req, res) =>{
+    let itempedido = await buscarItempedido();
+    res.json(itempedido);
+});
+
+app.get('/firma/1.0.0/itempedido/:id', async (req, res) =>{
+    let id = parseInt(req.params.id);
+    let itempedido = await buscarItempedidoId(id);
+    res.json(itempedido);
+});
+
+//  ---- POST ----
+app.post('/firma/1.0.0/itempedido', async (req, res) =>{
+    let {id, id_pedido, id_produto, qnt} = req.body;
+    const infos = [id, id_pedido, id_produto, qnt];
+    let result = await incluirItempedido(infos);
+    res.json(result);
+});
+
+//  ---- PUT ----
+app.put('/firma/1.0.0/itempedido/:id', async (req, res) => {
+    const itempedido = req.body;
+    const results = await atualizarItempedido(itempedido);
+    res.json(results);
+});
+
+//  ---- PATCH ----
+app.patch('/firma/1.0.0/itempedido/:id', async (req, res) => {
+    const itempedido = {
+        id: req.params.id,
+        qnt: req.body.qnt
+    };
+
+    const results = await atualizarItempedidoQnt(itempedido);
+    res.json(results);
+});
+
+//  ---- DELETE ----
+app.delete('/firma/1.0.0/itempedido/:id', async (req, res) => {
+    const id = req.params.id;
+    const results = await deletarItempedido(id);
+    res.json(results);
+});
+
+//-----------tbl_pedido---------------------
+//  ---- GET ----
+app.get('/firma/1.0.0/pedido', async (req, res) =>{
+    let pedido = await buscarPedido();
+    res.json(pedido);
+});
+
+app.get('/firma/1.0.0/pedido/:numero', async (req, res) =>{
+    let numero = parseInt(req.params.numero);
+    let pedido = await buscarPedidoNumero(numero);
+    res.json(pedido);
+});
+
+//  ---- POST ----
+app.post('/firma/1.0.0/pedido', async (req, res) =>{
+    let {numero, data_elaboracao, cliente_id} = req.body;
+    const infos = [numero, data_elaboracao, cliente_id];
+    let result = await incluirPedido(infos);
+    res.json(result);
+});
+
+//  ---- PUT ----
+app.put('/firma/1.0.0/pedido/:numero', async (req, res) => {
+    const pedido = req.body;
+    const results = await atualizarPedido(pedido);
+    res.json(results);
+});
+
+//  ---- PATCH ----
+app.patch('/firma/1.0.0/pedido/:numero', async (req, res) => {
+    const pedido = {
+        numero: req.params.numero,
+        data_elaboracao: req.body.data_elaboracao
+    };
+
+    const results = await atualizarPedidoData(pedido);
+    res.json(results);
+});
+
+//  ---- DELETE ----
+app.delete('/firma/1.0.0/pedido/:numero', async (req, res) => {
+    const numero = req.params.numero;
+    const results = await deletarPedido(numero);
+    res.json(results);
+});
+
+//-----------tbl_produtos---------------------
+//  ---- GET ----
+app.get('/firma/1.0.0/produto', async (req, res) =>{
+    let produto = await buscarProduto();
+    res.json(produto);
+});
+
+app.get('/firma/1.0.0/produto/:codigo', async (req, res) =>{
+    let codigo = parseInt(req.params.codigo);
+    let produto = await buscarProdutoCodigo(codigo);
+    res.json(produto);
+});
+
+//  ---- POST ----
+app.post('/firma/1.0.0/produto', async (req, res) =>{
+    let {codigo, nome, id_categoria, preco} = req.body
+    const infos = [codigo, nome, id_categoria, preco]
+    let result = await incluirProdutos(infos)
+    res.json(result)
 });
 
 app.listen(process.env.PORTA, () => {
