@@ -1,6 +1,7 @@
 const {conexao} = require('../conexao');
 
 async function atualizarCategoriaNome(categoria) {
+    
     const sql = `UPDATE tbl_categoria 
                 SET nome = ?
                 WHERE id = ?`;
