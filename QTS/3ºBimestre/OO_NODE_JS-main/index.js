@@ -1,6 +1,7 @@
 
 const { Conta, gerarContas } = require ("./model/Conta.js");
-const {ContaCorrente} = require ('./model/ContaCorrente.js');
+const { ContaCorrente } = require ('./model/ContaCorrente.js');
+const { ContaPoupanca } = require('./model/ContaPoupanca.js');
 
 const express = require ('express');
 gerarContas()
@@ -104,6 +105,13 @@ app.get('/contasCC/', (req, res)=>{
     ContaCorrente.gerarContasCorrentes()
     let contasCC = ContaCorrente.contasCC
     res.json(contasCC)
+})
+
+//Conta poupança
+app.get('/contasP/', (req, res)=>{    
+    ContaPoupanca.gerarContasPoupancas();
+    let contasP = ContaPoupanca.contasP;
+    res.json(contasP);
 })
 
 
