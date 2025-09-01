@@ -9,7 +9,7 @@ test.skip('Lista de contas', ()=>{
 })
 
 test('Função transferir com sucesso', ()=>{
-    let origem = contas[5]
+    let origem = contas[5]  
     let destino = contas[6]
 
     const resultado = origem.transferir({agencia: origem.agencia, numero:origem.numero_conta, senha:origem.senha}, {agencia: destino.agencia, numero:destino.numero_conta, senha:destino.senha}, 100)
