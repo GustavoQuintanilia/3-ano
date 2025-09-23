@@ -1,0 +1,64 @@
+body{
+    background-image: url('../../img/fundo_LC.png');
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.container{
+    background-color: #FFFFFF;
+    height: 800px;
+    width: 700px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.img{
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+img{
+    max-height: 800px;
+    max-width: 400px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.forms{
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.forms h1{
+    width: 335px;
+    margin-top: 75px;
+    margin-left: 60%;
+    margin-right: 60%;
+    font-family: sans-serif;
+}
+
+form{
+    background-color: #1E90FF;
+    width: 450px;
+    height: 370px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+button{
+    width: 300px;
+}
+
+label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input{
+    width: 20px;
+}
