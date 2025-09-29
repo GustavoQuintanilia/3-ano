@@ -1,0 +1,30 @@
+footer{
+    background-color: #1E90FF;
+    border-top: 10px solid #FFD700;
+    min-height: 200px;
+    text-align: center;
+}
+
+h2{
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.descricao{
+    min-width: 100vh;
+    display: flex;
+}
+
+.integrantes{
+    width: 50%;
+    font-weight: bold;
+    color: #ffff;
+}
+
+.redes_Sociais{
+    width: 50%;
+}
+
+.direitos{
+    margin-bottom: 15px;
+}
