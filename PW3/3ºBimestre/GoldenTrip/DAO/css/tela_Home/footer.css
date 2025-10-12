@@ -5,7 +5,7 @@ footer{
     text-align: center;
 }
 
-h2{
+h3{
     font-weight: bold;
     color: #FFD700;
 }
@@ -23,8 +23,31 @@ h2{
 
 .redes_Sociais{
     width: 50%;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-gap: 25px;
+}
+
+.icone {
+  background-color: #b3ecff; /* azul claro */
+  width: 80px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #000;
+  transition: 0.3s;
+}
+
+.icone:hover {
+  transform: scale(1.1);
+  background-color: #a0e1ff;
 }
 
 .direitos{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }

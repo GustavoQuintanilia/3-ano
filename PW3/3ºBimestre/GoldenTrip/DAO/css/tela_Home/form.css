@@ -1,0 +1,50 @@
+.entre_contato{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form{
+    background-color: #5AAEFF;
+    width: 25%;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+form{
+    width: 380px;
+    height: 300px;
+}
+
+label{
+    font-size: 20px;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    border-radius: 11px;
+    margin-bottom: 20px;
+}
+
+textarea{
+    width: 300px;
+    height: 100px;
+    border-radius: 11px;
+    margin-bottom: 20px;
+}
+
+.enviar{
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
