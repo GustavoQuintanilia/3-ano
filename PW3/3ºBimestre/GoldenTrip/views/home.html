@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../DAO/css/tela_Home/header.css">
     <link rel="stylesheet" href="../DAO/css/tela_Home/body.css">
     <link rel="stylesheet" href="../DAO/css/tela_Home/footer.css">
+    <link rel="stylesheet" href="../DAO/css/tela_Home/carousel.css">
+    <link rel="stylesheet" href="../DAO/css/tela_Home/form.css">
 </head>
 <body>
     <header>
@@ -22,10 +24,58 @@
     </header>
 
 
-    <h1>Ainda em produção!!!</h1>
+     <div class="carousel-container">
+        <button class="arrow left" onclick="prevSlide()">❮</button>
+
+        <div class="carousel" id="carousel">
+            <!-- Slide 1 -->
+            <div class="slide" style="background-image: url('https://www.umviajante.com.br/wp-content/uploads/2021/02/cataratas-do-iguacu-foz-do-iguacu-parana-brasil-33.jpg');">
+                <div class="overlay-box">
+                <h2 id="h2">Venha conhecer uma das sete maravilhas do mundo!</h2>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');">
+                <div class="overlay-box" style="background-color: rgba(255,255,255,0.9);">
+                <h2 id="h2">Outro conteúdo</h2>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1531177071257-3c4f8e17f94f');">
+                <div class="overlay-box">
+                <h2 id="h2">Mais uma mensagem</h2>
+            </div>
+        </div>
+    </div>
+
+    <button class="arrow right" onclick="nextSlide()">❯</button>
+  </div>
+
 
     <footer>
-        <h2>GoldenTrip</h2>
+        <!--forms-->
+        <div class="entre_contato">
+            <div class="container-form">
+                <h2>Entre em contato</h2>
+                <form id="form_contato">
+                    <!--nome-->
+                    <label for="nome">Insira seu nome:</label><br>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome"><br>
+
+                    <!--mensagem-->
+                    <label for="mensagem">Insira sua mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea><br>
+
+                    <!--botão-->
+                    <button type="submit" class="enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <!--descrição-->
+        <h3 style="margin-bottom: 40px;">GoldenTrip</h3>
 
         <div class="descricao">
             <div class="integrantes">
@@ -35,9 +85,14 @@
                 <p>Nathan Fioravanti</p>
             </div>
             <div class="redes_Sociais">
-                <p>nvihgbhngbijfg</p>
+                <div class="icone"><i class="fab fa-instagram"></i></div>
+                <div class="icone"><i class="fas fa-phone"></i></div>
+                <div class="icone"><i class="fab fa-github"></i></div>
+                <div class="icone"><i class="fas fa-hand-holding-heart"></i></div>
             </div>
         </div>
     </footer>
+
+    <script src="../DAO/js/carousel.js"></script>
 </body>
 </html>
