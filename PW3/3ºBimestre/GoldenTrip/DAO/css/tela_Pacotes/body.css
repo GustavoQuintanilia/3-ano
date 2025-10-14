@@ -1,0 +1,75 @@
+
+
+/* Ícone de perfil */
+.perfil {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    font-size: 28px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+/* Grid de pacotes */
+.container-pacotes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* Cada cartão */
+.pacote {
+    width: 180px;
+    background-color: #d9d9d9;
+    border-radius: 6px;
+    box-shadow: 3px 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    padding-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+.pacote:hover {
+    transform: scale(1.05);
+}
+
+/* Área da imagem */
+.pacote .imagem {
+    background-color: white;
+    border: 2px solid black;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Texto */
+.pacote p {
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Botão do carrinho flutuante */
+.carrinho {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background-color: #ffeb00;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.carrinho:hover {
+    transform: scale(1.1);
+}
