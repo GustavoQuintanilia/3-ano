@@ -1,0 +1,166 @@
+/* header */
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ícone de perfil */
+.perfil {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    font-size: 28px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px;
+    border: 2px solid #000;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* Navbar */
+nav {
+    background-color: #1E90FF; /* azul */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-bottom: 5px solid #FFD700; /* linha amarela */
+}
+
+    /* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    /* Links */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s;
+}
+
+    /* Link ativo */
+.menu li a.active {
+    color: #FFD700;
+}
+
+    /* Hover */
+.menu li a:hover {
+    color: #FFD700;
+}
+
+
+/* Estilo principal */
+.reservas-container {
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* Abas */
+.abas {
+    display: flex;
+    gap: 20px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.aba-item {
+    background-color: #1E90FF;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.aba-item:hover {
+    background-color: #1C86EE;
+}
+
+.aba-item.active {
+    background-color: white;
+    color: #FFD700;
+    border: 2px solid #ccc;
+    border-bottom: none;
+}
+
+/* Conteúdo das abas */
+.conteudo-aba {
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.conteudo-aba.active {
+    display: flex;
+}
+
+/* card */
+
+.card {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+}
+.card .card-title,
+.card .card-text {
+    padding: 20px;
+}
+
+.btn-btn-primary {
+    margin-left: 110px;
+    
+}
+
+.card-img-top {
+        width: 286px;
+        height: 180px;
+}
+
+/* Botão do carrinho flutuante */
+.carrinho {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background-color: #ffeb00;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrinho:hover {
+    transform: scale(1.1);
+}
