@@ -1,18 +1,4 @@
 
-
-/* Ícone de perfil */
-.perfil {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    font-size: 28px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 8px;
-    border: 2px solid #000;
-    cursor: pointer;
-}
-
 /* Grid de pacotes */
 .container-pacotes {
     display: grid;
@@ -68,6 +54,11 @@
     font-size: 24px;
     cursor: pointer;
     transition: 0.2s;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carrinho:hover {
