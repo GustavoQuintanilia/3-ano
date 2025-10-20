@@ -48,3 +48,122 @@ h1{
 .carrinho:hover {
     transform: scale(1.1);
 }
+
+.gol-secao {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.gol-secao h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.gol-item {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gol-card {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px 0;
+}
+
+.gol-card h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.gol-card p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.gol-card button {
+    background-color: #FF6A13; 
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.gol-card button:hover {
+    background-color: #FF4A00; 
+}
+
+.orange {
+    background-color: #FF6A13;
+}
+
+.gray {
+    background-color: #4B4B4B;
+}
+
+.blue {
+    background-color: #1E90FF;
+}
+
+/* seção de reservas, pacotes e painel do viajante*/
+.painel-secao {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.painel-item {
+    width: 22%;
+    height: 700px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+.imagem-item img {
+    width: 379px;
+    height: 400px;
+    object-fit: contain;
+}
+.imagem {
+    width: 100px;
+    height: 200px;
+}
+
+.descricao-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.descricao-item p {
+    color: #777;
+    font-size: 14px;
+    padding: 15px;
+}
+
+button {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #FFD700;
+}
