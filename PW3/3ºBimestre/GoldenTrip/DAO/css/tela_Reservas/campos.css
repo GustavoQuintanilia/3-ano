@@ -1,0 +1,124 @@
+/* Área dos itens selecionados */
+.itens {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.item-reserva {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.item-reserva h4 {
+  color: #003366; /* Azul escuro da marca */
+  margin-bottom: 6px;
+}
+
+.item-reserva p {
+  color: #444;
+  font-size: 14px;
+}
+
+.total-reserva {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.total-reserva h3 {
+  color: #003366;
+  margin: 10px 0;
+}
+
+/* Botão de remover itens */
+.btn-remover {
+  background: linear-gradient(135deg, #003366, #0077b6);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-remover:hover {
+  background: linear-gradient(135deg, #d4af37, #f4c542); /* dourado no hover */
+  color: #003366;
+  transform: scale(1.05);
+}
+
+.campos-dinamicos {
+  margin-top: 20px;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.campos-dinamicos label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.campos-dinamicos input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#efetuarCompra {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#efetuarCompra:hover {
+  background-color: #0056b3;
+}
+
+.metodos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.metodo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.metodo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.metodo .bolinha {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+/* 🔹 Quando selecionado */
+.metodo.ativo .bolinha {
+  background-color: #0077ff; /* Azul da marca */
+  border-color: #0077ff;
+}
+

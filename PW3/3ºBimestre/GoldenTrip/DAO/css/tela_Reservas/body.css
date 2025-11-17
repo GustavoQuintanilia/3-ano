@@ -1,0 +1,155 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f0f0;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+
+.titulo {
+  color: #007BFF;
+  background-color: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.linha {
+  height: 4px;
+  background-color: #FFD700;
+  margin: 10px 0 20px;
+  border-radius: 2px;
+}
+
+.itens {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.itens {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.secao-categoria {
+  margin-bottom: 20px;
+}
+
+.lista-categoria {
+  margin-top: 8px;
+  padding-left: 15px;
+}
+
+.item-selecionado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 6px;
+}
+
+.item-selecionado button {
+  background: #c0392b;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.item-selecionado button:hover {
+  background: #a93226;
+}
+
+.total-compra {
+  border-top: 2px solid #eee;
+  padding-top: 15px;
+  text-align: right;
+  font-size: 16px;
+  color: #333;
+}
+
+.mensagem-vazia {
+  color: #777;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+
+.pagamentos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.metodo {
+  position: relative;
+  width: 130px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.metodo img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bolinha {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+
+.metodo.selecionado .bolinha {
+  background-color: #007BFF;
+}
+
+#confirmar {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#confirmar.visivel {
+  opacity: 1;
+  pointer-events: auto;
+}
