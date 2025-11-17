@@ -30,23 +30,46 @@ h3{
     grid-gap: 25px;
 }
 
+/* garante que o conteúdo interno ocupe todo o espaço do ícone */
 .icone {
-  background-color: #b3ecff; /* azul claro */
+  background-color: #b3ecff;
   width: 80px;
-  height: 50px;
-  border-radius: 50px;
+  height: 80px;           /* recomendo 80x80 para forma mais equilibrada */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
-  color: #000;
   transition: 0.3s;
+  overflow: hidden;       /* evita que imagem "vaze" */
+  cursor: pointer;
 }
 
+/* caso você mantenha o <i> como wrapper (ex.: <i class="fab ..."><img></i>) */
+.icone > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* estilo definitivo para a imagem */
+.icone img {
+  max-width: 60%;
+  max-height: 60%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: auto;           /* garante centralização se o img não preencher todo o espaço */
+}
+
+/* hover suave mantendo centralização */
 .icone:hover {
   transform: scale(1.1);
   background-color: #a0e1ff;
 }
+
 
 .direitos{
     margin-bottom: 20px;

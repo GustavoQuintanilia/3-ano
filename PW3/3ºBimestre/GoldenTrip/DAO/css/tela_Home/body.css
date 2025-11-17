@@ -6,49 +6,6 @@ h1{
     margin-bottom: 100px;
 }
 
-/* Ícone de perfil */
-.perfil {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    font-size: 28px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 8px;
-    border: 2px solid #000;
-    cursor: pointer;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Botão do carrinho flutuante */
-.carrinho {
-    position: fixed;
-    bottom: 20px;
-    right: 25px;
-    background-color: #ffeb00;
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.2s;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carrinho:hover {
-    transform: scale(1.1);
-}
-
 .gol-secao {
     text-align: center;
     margin: 50px 0;
@@ -113,57 +70,70 @@ h1{
     background-color: #1E90FF;
 }
 
-/* seção de reservas, pacotes e painel do viajante*/
+/* seção de reservas, pacotes e painel do viajante */
 .painel-secao {
     display: flex;
-    justify-content: space-around;
-    margin: 50px 0;
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
+    padding: 40px 0;
 }
 
 .painel-item {
-    width: 22%;
-    height: 700px;
-    background-color: #ffffff;
-    border-radius: 10px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 5px;
     text-align: center;
-    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.painel-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.imagem-item {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
 }
 
 .imagem-item img {
-    width: 379px;
-    height: 400px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* deixa a imagem bem cortada, sem distorção */
+    display: block;
 }
-.imagem {
-    width: 100px;
-    height: 200px;
+
+.descricao-item {
+    padding: 20px;
 }
 
 .descricao-item h3 {
-    font-size: 20px;
+    font-size: 22px;
     color: #333;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .descricao-item p {
-    color: #777;
+    color: #666;
     font-size: 14px;
-    padding: 15px;
+    margin-bottom: 15px;
 }
 
-button {
+.descricao-item button {
     background-color: #1E90FF;
-    color: white;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 10px 25px;
+    border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-button:hover {
+.descricao-item button:hover {
     background-color: #FFD700;
 }
