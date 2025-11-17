@@ -1,113 +1,206 @@
-/* Fundo geral */
+/* ==== Fundo geral ==== */
 body {
     margin: 0;
+    padding: 40px 20px;               /* <<< espaço em cima, baixo e laterais */
+    min-height: 100vh;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background: linear-gradient(to bottom, #007bff, #00c6ff);
-  }
-  
-  /* Container principal */
-  .container {
-    display: flex;
-    width: 900px;
-    height: 600px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    background: #fff;
-  }
-  
-  /* Imagem do avião */
+}
 
-  .img img {
+/* ==== Container Principal ==== */
+.cadastro-container {
+    width: 1150px;
+    height: 620px;                    /* <<< agora NÃO ocupa a tela inteira */
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.32);
+}
+
+/* ==== Imagem ==== */
+.cadastro-img {
+    width: 50%;
+}
+
+.cadastro-img img {
+    width: 100%;
     height: 100%;
-    width:  65%;
     object-fit: cover;
     filter: brightness(0.8);
-  }
+}
 
-  .topo{
+/* ==== Formulário ==== */
+.cadastro-form {
+    width: 50%;
     display: flex;
-  }
-  
-  /* Título */
-  .forms h2 {
-    font-size: 24px;
-    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    box-sizing: border-box;
+}
+
+.cadastro-form h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
     color: #333;
-  }
-  
-  /* Campos */
-  .campos {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .campos label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #444;
-  }
-  
-  .campos input {
+}
+
+/* ==== Campos ==== */
+.campo {
     width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    background: #f5f5f5;
+    margin-bottom: 18px;
+}
+
+.campo label {
     font-size: 15px;
-    outline: none;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.campo input {
+    width: 100%;
+    height: 38px;                     /* <<< menor altura */
+    padding: 0 10px;                  /* <<< não aumenta a altura */
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    background: #f0f0f0;
     transition: 0.3s;
-  }
-  
-  .campos input:focus {
+}
+
+.campo input:focus {
     background: #fff;
     border: 2px solid #007bff;
-  }
-  
-  /* Botão */
-  button {
+    outline: none;
+}
+
+/* ==== Botão ==== */
+.btn-cadastrar {
     width: 100%;
     padding: 12px;
+    margin-top: 10px;
     border: none;
     border-radius: 12px;
-    font-size: 16px;
     font-weight: bold;
+    font-size: 16px;
     color: #fff;
     background: linear-gradient(to right, #007bff, #00c6ff);
     cursor: pointer;
     transition: 0.3s;
-  }
-  
-  button:hover {
+}
+
+.btn-cadastrar:hover {
     opacity: 0.9;
-  }
+}
 
-
-
-  .button button{
-    border-radius: 100%;
-    height: 50px;
-    width: 50px;
-  }
-  
-  /* Link cadastro */
-  a {
-    width: 20%;
-    height: 10%;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #007bff;
+/* ==== Link Voltar ==== */
+.voltar {
+    margin-top: 15px;
+    font-size: 15px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  a:hover {
+    color: #007bff;
+}
+
+.voltar:hover {
     text-decoration: underline;
-  }
+}
+
+.input-eye {
+    position: relative;
+    width: 100%;
+}
+
+.input-eye input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.eye-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 12px;
+    border: 2px solid #333;
+    border-radius: 50% / 50%;
+    cursor: pointer;
+}
+
+.eye-toggle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #333;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eye-toggle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.eye-toggle.active::after {
+    opacity: 1;
+}
+
+/* ==== RESPONSIVIDADE ==== */
+@media (max-width: 1000px) {
+    body {
+        padding: 20px;
+    }
+
+    .cadastro-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .cadastro-img {
+        width: 100%;
+        height: 230px;
+    }
+
+    .cadastro-form {
+        width: 100%;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cadastro-form h2 {
+        font-size: 22px;
+    }
+
+    .campo input {
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .btn-cadastrar {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
