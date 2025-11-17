@@ -1,118 +1,208 @@
-/* Fundo geral */
+/* ======= LAYOUT GERAL ======= */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to bottom, #007bff, #00c6ff);
 }
-  
-  /* Container principal */
-  .container {
-    display: flex;
-    width: 900px;
-    height: 600px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    background: #fff;
-  }
-  
-  /* Imagem do avião */
-  .img img {
-    height: 100%;
-    width: 75%;
-    object-fit: cover;
-    filter: brightness(0.8);
-  }
-  
-  /* Área de login */
-  .login {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    margin-right: 15%;
-    margin-top: -6%;
-  }
-  
-  /* Card dos forms */
-  .forms {
+
+/* Container principal (card) */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 70vh;
+  min-height: 520px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  background: #fff;
+}
+
+/* ======= IMAGEM (LADO ESQUERDO) ======= */
+.img {
+  flex: 1 1 50%;
+  min-width: 320px;
+  display: block;
+  position: relative;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92);
+  border-radius: 18px 0 0 18px; /* canto arredondado só à esquerda */
+}
+
+/* ======= ÁREA DE LOGIN (LADO DIREITO) ======= */
+.login {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  background: #ffffff; /* garante branco */
+}
+
+/* Form container (maior e centralizado) */
+.forms {
+  width: 100%;
+  max-width: 360px;      /* controla a largura do formulário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TÍTULO */
+.forms h2 {
+  margin: 0 0 24px 0;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #222;
+  text-align: center;
+}
+
+/* Campos (label + input) */
+.campos {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.campos label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.campos input {
+  width: 100%;
+  height: 50px;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #f2f2f2;
+  outline: none;
+  box-sizing: border-box;
+  transition: box-shadow .15s ease, background .15s ease;
+}
+
+.campos input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.12);
+}
+
+/* BOTÃO */
+button[type="submit"] {
+  width: 220px;
+  height: 48px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,123,255,0.18);
+}
+
+/* LINK CADASTRO */
+.forms .link-cadastro {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Ajustes visuais menores */
+.forms p, .forms small { 
+  margin: 0;
+ }
+.forms .spacer { 
+  height: 6px; 
+}
+
+.input-eye {
+    position: relative;
     width: 100%;
-    max-width: 350px;
-    text-align: center;
-  }
-  
-  /* Título */
-  .forms h2 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Campos */
-  .campos {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .campos label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #444;
-  }
-  
-  .campos input {
+}
+
+.input-eye input {
     width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    background: #f5f5f5;
-    font-size: 15px;
-    outline: none;
-    transition: 0.3s;
-  }
-  
-  .campos input:focus {
-    background: #fff;
-    border: 2px solid #007bff;
-  }
-  
-  /* Botão */
-  button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(to right, #007bff, #00c6ff);
+    padding-right: 40px; /* espaço para o olho */
+    box-sizing: border-box;
+}
+
+/* olho minimalista */
+.eye-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 12px;
+    border: 2px solid #333;
+    border-radius: 50% / 50%;
     cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  button:hover {
-    opacity: 0.9;
-  }
-  
-  /* Link cadastro */
-  a {
-    display: block;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+}
+
+.eye-toggle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #333;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eye-toggle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.eye-toggle.active::after {
+    opacity: 1;
+}
+
+
+/* ======= RESPONSIVO ======= */
+@media (max-width: 900px) {
+  .container { flex-direction: column; height: auto; max-width: 760px; }
+  .img { height: 220px; width: 100%; border-radius: 18px 18px 0 0; }
+  .img img { border-radius: 18px 18px 0 0; height: 100%; }
+  .login { flex: 1 1 auto; padding: 30px; }
+  .forms { max-width: 100%; }
+  button[type="submit"] { width: 60%; }
+}
+
+@media (max-width: 420px) {
+  .container { width: 95%; }
+  .forms h2 { font-size: 22px; }
+  .campos input { height: 44px; font-size: 15px; }
+  button[type="submit"] { width: 72%; height: 44px; font-size: 16px; }
+}
