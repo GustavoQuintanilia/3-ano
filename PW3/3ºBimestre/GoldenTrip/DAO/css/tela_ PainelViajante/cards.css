@@ -1,0 +1,100 @@
+/* ====== ÁREA DE RESERVAS ====== */
+.area-reservas {
+  margin-top: 60px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.area-reservas h2 {
+  font-size: 30px;
+  color: #1E90FF;
+  margin-bottom: 30px;
+  border-bottom: 4px solid #FFD700;
+  display: inline-block;
+  padding-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ====== LISTA DE CARDS ====== */
+.lista-reservas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* ====== CARD DE RESERVA ====== */
+.card-reserva {
+  background: #ffffff;
+  border: 2px solid #FFD700;
+  border-radius: 14px;
+  padding: 22px 25px;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card-reserva:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ====== TÍTULO ====== */
+.card-reserva h3 {
+  color: #1E90FF;
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* ====== LISTA DE ITENS ====== */
+.card-reserva ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 15px 0;
+}
+
+.card-reserva ul li {
+  background: #f8f8f8;
+  margin-bottom: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  border-left: 4px solid #FFD700;
+  transition: background 0.3s;
+}
+
+.card-reserva ul li:hover {
+  background: #fff9e6;
+}
+
+/* ====== TEXTO GERAL ====== */
+.card-reserva p {
+  color: #444;
+  margin: 5px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ====== DESTAQUES ====== */
+.card-reserva strong {
+  color: #1E90FF;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) {
+  .area-reservas h2 {
+    font-size: 24px;
+  }
+
+  .card-reserva {
+    padding: 18px;
+  }
+
+  .card-reserva h3 {
+    font-size: 19px;
+  }
+}

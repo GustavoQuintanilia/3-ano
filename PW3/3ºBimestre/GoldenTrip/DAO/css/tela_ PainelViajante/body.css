@@ -1,0 +1,271 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== CONTAINER PRINCIPAL ====== */
+.painel-container {
+  width: 90%;
+  max-width: 950px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+/* ====== CARD DO PERFIL ====== */
+.card-perfil {
+  border: 4px solid #FFD700;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 60px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-perfil:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ====== CABEÇALHO DO PERFIL ====== */
+.perfil-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ====== FOTO DO PERFIL ====== */
+.foto-perfil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #ddd;
+  background-image: url('../../img/painel_do_viajante.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #FFD700;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.32);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.6);
+}
+
+/* ====== FOTO INSERIDA PELO USUÁRIO ====== */
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ====== INFORMAÇÕES DO USUÁRIO ====== */
+.info-usuario {
+  flex: 1;
+  text-align: left;
+  margin-left: 30px;
+  color: #333;
+}
+
+.info-usuario h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1E90FF;
+  margin: 0;
+}
+
+.info-usuario p {
+  color: #555;
+  font-size: 17px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* ====== BOTÕES EDITAR E SAIR ====== */
+.botoes {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.botoes button {
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.botoes button:hover {
+  background-color: #0066cc;
+  transform: translateY(-2px);
+}
+
+.botoes button:active {
+  transform: scale(0.97);
+}
+
+/* --- MENU DE 3 PONTOS --- */
+.menu-opcoes {
+  position: relative;
+}
+
+.btn-tres-pontos {
+  background: #1E90FF;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-tres-pontos:hover {
+  background: #0066cc;
+}
+
+/* --- DROPDOWN --- */
+.dropdown-opcoes {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #fff;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-opcoes button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #d60000;
+  border-radius: 8px;
+}
+
+.dropdown-opcoes button:hover {
+  background: #ffe4e4;
+}
+
+/* ====== MODAL ====== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1E90FF;
+  font-size: 22px;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.botoes-modal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.botoes-modal button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+#btnSalvarAlteracoes {
+  background: #1E90FF;
+  color: white;
+}
+
+#btnSalvarAlteracoes:hover {
+  background: #0066cc;
+}
+
+#btnFecharModal {
+  background: #ddd;
+  color: #333;
+}
+
+#btnFecharModal:hover {
+  background: #ccc;
+}
