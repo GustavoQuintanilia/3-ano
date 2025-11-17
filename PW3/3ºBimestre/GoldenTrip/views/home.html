@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../DAO/css/tela_Home/footer.css">
     <link rel="stylesheet" href="../DAO/css/tela_Home/carousel.css">
     <link rel="stylesheet" href="../DAO/css/tela_Home/form.css">
+    <link rel="stylesheet" href="../DAO/css/carrinho.css">
+    <link rel="stylesheet" href="../DAO/css/perfil.css">
+    <link rel="stylesheet" href="../DAO/css/tela_Home/modal.css">
 </head>
 <body>
     <header>
@@ -18,15 +21,18 @@
                 <li><a href="/home.html" class="active">HOME</a></li>
                 <li><a href="/pacotes.html">PACOTES</a></li>
                 <li><a href="/opcoes_Reserva.html">OPÇÕES DE RESERVAS</a></li>
-                <li><a href="#">RESERVAS</a></li>
+                <li><a href="/reservas.html">RESERVAS</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Ícone do perfil -->
-    <div class="perfil">
-        <i class="fa-solid fa-user"><img src="../DAO/img/painel_do_viajante.png" style="height: 50px; width: 50px; border-radius: 100%;" alt=""></i>
-    </div>
+    <a href="/painelViajante.html">
+        <div class="perfil" id="iconePerfil">
+            <img id="fotoPerfilIcone" src="../DAO/img/painel_do_viajante.png" alt="Perfil">
+        </div>
+    </a>
+
 
 
      <div class="carousel-container">
@@ -34,23 +40,23 @@
 
         <div class="carousel" id="carousel">
             <!-- Slide 1 -->
-            <div class="slide" style="background-image: url('https://www.umviajante.com.br/wp-content/uploads/2021/02/cataratas-do-iguacu-foz-do-iguacu-parana-brasil-33.jpg');">
+            <div class="slide" style="background-image: url('../DAO/img/slide1.jpg');">
                 <div class="overlay-box">
                 <h2 id="h2">Venha conhecer uma das sete maravilhas do mundo!</h2>
                 </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');">
+            <div class="slide" style="background-image: url('../DAO/img/slide2.jpeg');">
                 <div class="overlay-box" style="background-color: rgba(255,255,255,0.9);">
-                <h2 id="h2">Outro conteúdo</h2>
+                <h2 id="h2">Realize os melhores passeios e explorações ao redor mundo!</h2>
                 </div>
             </div>
 
             <!-- Slide 3 -->
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1531177071257-3c4f8e17f94f');">
+            <div class="slide" style="background-image: url('../DAO/img/slide3.jpg');">
                 <div class="overlay-box">
-                <h2 id="h2">Mais uma mensagem</h2>
+                <h2 id="h2">Fique hospedado nos melhores hotéis de cada região!</h2>
             </div>
         </div>
     </div>
@@ -69,7 +75,7 @@
             <div class="descricao-item">
                 <h3>Pacotes</h3>
                 <p>Venha conhecer nossas melhores ofertas</p>
-                <button>Clique aqui</button>
+                <a href="/pacotes.html"><button>Clique aqui</button></a>
             </div>
         </div>
 
@@ -81,7 +87,7 @@
             <div class="descricao-item">
                 <h3>Reservas</h3>
                 <p>Venha conferir de perto os melhores tipos de reservas aqui</p>
-                <button>Clique aqui</button>
+                <a href="/opcoes_Reserva.html"><button>Clique aqui</button></a>
             </div>
         </div>
 
@@ -92,7 +98,7 @@
             <div class="descricao-item">
                 <h3>Painel do viajante</h3>
                 <p>Explore o universo de viagens aqui na GoldenTrip!</p>
-                <button>Clique aqui</button>
+                <a href="/painelViajante.html"><button>Clique aqui</button></a>
             </div>
         </div>
     </section>
@@ -103,50 +109,81 @@
         
         <div class="gol-item">
             <div class="gol-card orange">
-                <h3>Smiles</h3>
+                <h3>Painel do Viajante</h3>
                 <p>Se cadastre na companhia aérea que deixa as pessoas mais felizes</p>
-                <button>Cadastrar</button>
+                <a href="/painelViajante.html"><button>Conhecer</button></a>
             </div>
     
             <div class="gol-card gray">
-                <h3>Promoções</h3>
+                <h3>Pacotes</h3>
                 <p>Promoções a todo o momento e a toda hora!</p>
-                <button>Conhecer</button>
+                <a href="/pacotes.html"><button>Conhecer</button></a>
             </div>
     
             <div class="gol-card blue">
-                <h3>Ofertas</h3>
+                <h3>Reservas</h3>
                 <p>Garanta passagens em oferta e explore o mundo aproveitando ao máximo.</p>
-                <button>Conhecer</button>
+                <a href="/opcoes_Reserva.html"><button>Conhecer</button></a>
             </div>
         </div>
     </section>
 
     <!-- Botão flutuante do carrinho -->
-    <button class="carrinho">
-        <i class="fa-solid fa-cart-shopping"><img src="../DAO/img/carrinho2-removebg-preview.png" style="height: 50px; width: 50px;" alt=""></i>
+    <button class="carrinho" id="btnCarrinho">
+    <img src="../DAO/img/carrinho2-removebg-preview.png" style="height: 36px; width: 36px;" alt="carrinho">
     </button>
+
+    <!-- Modal do Carrinho -->
+    <div id="modalCarrinho" class="modal" aria-hidden="true">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Carrinho de Compras</h2>
+
+        <div class="carrinho-opcoes">
+        <h3>Opções de Reserva</h3>
+        <div id="hotelList"><p>Nenhum hotel adicionado.</p></div>
+        <div id="passagemList"><p>Nenhuma passagem adicionada.</p></div>
+        <div id="passeioList"><p>Nenhum passeio adicionado.</p></div>
+        </div>
+
+        <div class="carrinho-pacotes">
+        <h3>Pacotes</h3>
+        <div id="pacoteList"><p>Nenhum pacote adicionado.</p></div>
+        </div>
+
+        <!-- botão fechar -->
+        <div style="margin-top:14px; text-align:right;">
+        <button id="fecharModal" class="btn-btn-primary">Fechar</button>
+        </div>
+    </div>
+    </div>
+
 
 
     <footer>
         <!--forms-->
         <div class="entre_contato">
-            <div class="container-form">
-                <h2>Entre em contato</h2>
-                <form id="form_contato">
-                    <!--nome-->
-                    <label for="nome">Insira seu nome:</label><br>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome"><br>
+        <div class="container-form">
+            <h2>Entre em contato</h2>
+            <form id="form_contato">
+            <!--nome-->
+            <label for="nome">Insira seu nome:</label><br>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br>
 
-                    <!--mensagem-->
-                    <label for="mensagem">Insira sua mensagem:</label><br>
-                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea><br>
+            <!--email-->
+            <label for="email">Insira seu Gmail:</label><br>
+            <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required><br>
 
-                    <!--botão-->
-                    <button type="submit" class="enviar">Enviar</button>
-                </form>
-            </div>
+            <!--mensagem-->
+            <label for="mensagem">Insira sua mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea><br>
+
+            <!--botão-->
+            <button type="submit" class="enviar">Enviar</button>
+            </form>
         </div>
+        </div>
+
 
         <!--descrição-->
         <h3 style="margin-bottom: 40px;">GoldenTrip</h3>
@@ -159,17 +196,30 @@
                 <p>Nathan Fioravanti</p>
             </div>
             <div class="redes_Sociais">
-                <div class="icone"><i class="fab fa-instagram"></i></div>
-                <div class="icone"><i class="fas fa-phone"></i></div>
-                <div class="icone"><i class="fab fa-github"></i></div>
-                <div class="icone"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="icone" id="instagram"><i class="fab fa-instagram"><img src="../DAO/img/instagram.png" alt=""></i></div>
+                <div class="icone" id="linkedin"><i class="fab fa-linkedin"><img src="../DAO/img/linkedin.png" alt=""></i></div>
+                <div class="icone" id="github"><i class="fab fa-github"><img src="../DAO/img/GitHub.png" alt=""></i></div>
+                <div class="icone" id="gmail"><i class="fas fa-envelope"><img src="../DAO/img/gmail.png" alt=""></i></div>
             </div>
+
+            <!-- Modal -->
+            <div id="socialModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modalTitle">Redes Sociais</h2>
+                    <ul id="socialLinks"></ul>
+                </div>
+            </div>
+
         </div>
     </footer>
 
         <!--Link para o emailjs-->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="../DAO/js/carousel.js"></script>
-    <script src="../DAO/js/entreContato.js"></script>
+    <script src="../DAO/js/home/carousel.js"></script>
+    <script src="../DAO/js/home/entreContato.js"></script>
+    <script src="../DAO/js/home/redesSociais.js"></script>
+    <script src="../DAO/js/carrinho.js"></script>
+    <script src="../DAO/js/perfil.js"></script>
 </body>
 </html>

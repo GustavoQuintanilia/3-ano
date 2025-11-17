@@ -6,6 +6,12 @@
     <title>goldentrip.com</title>
     <link rel="stylesheet" href="../DAO/css/tela_Pacotes/header.css">
     <link rel="stylesheet" href="../DAO/css/tela_Pacotes/body.css">
+    <link rel="stylesheet" href="../DAO/css/carrinho.css">
+    <link rel="stylesheet" href="../DAO/css/perfil.css">
+
+    <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
 </head>
 <body>
     <header>
@@ -15,81 +21,57 @@
                 <li><a href="/home.html">HOME</a></li>
                 <li><a href="/pacotes.html" class="active">PACOTES</a></li>
                 <li><a href="/opcoes_Reserva.html">OPÇÕES DE RESERVAS</a></li>
-                <li><a href="#">RESERVAS</a></li>
+                <li><a href="/reservas.html">RESERVAS</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Ícone do perfil -->
-    <div class="perfil">
-        <i class="fa-solid fa-user"><img src="../DAO/img/painel_do_viajante.png" style="height: 50px; width: 50px; border-radius: 100%;" alt=""></i>
-    </div>
+    <a href="/painelViajante.html">
+        <div class="perfil" id="iconePerfil">
+            <img id="fotoPerfilIcone" src="../DAO/img/painel_do_viajante.png" alt="Perfil">
+        </div>
+    </a>
 
     <!-- Container dos pacotes -->
     <div class="container-pacotes">
-        <!-- Repetindo 8 cartões -->
-        <div class="pacote">
-            <div class="imagem">imagem</div>
-            <p class="nome">Nome do pacote</p>
-            <p>Informações</p>
-            <p>Valor</p>
-        </div>
-
-        <div class="pacote">
-            <div class="imagem">imagem</div>
-            <p class="nome">Nome do pacote</p>
-            <p>Informações</p>
-            <p>Valor</p>
-        </div>
-
-        <div class="pacote">
-            <div class="imagem">imagem</div>
-            <p class="nome">Nome do pacote</p>
-            <p>Informações</p>
-            <p>Valor</p>
-        </div>
-
-        <div class="pacote">
-            <div class="imagem">imagem</div>
-            <p class="nome">Nome do pacote</p>
-            <p>Informações</p>
-            <p>Valor</p>
-        </div>
-
-        <div class="pacote">
-            <div class="imagem">imagem</div>
-            <p class="nome">Nome do pacote</p>
-            <p>Informações</p>
-            <p>Valor</p>
-        </div>
-
-        <div class="pacote">
-            <div class="imagem">imagem</div>
-            <p class="nome">Nome do pacote</p>
-            <p>Informações</p>
-            <p>Valor</p>
-        </div>
-
-        <div class="pacote">
-            <div class="imagem">imagem</div>
-            <p class="nome">Nome do pacote</p>
-            <p>Informações</p>
-            <p>Valor</p>
-        </div>
-
-        <div class="pacote">
-            <div class="imagem">imagem</div>
-            <p class="nome">Nome do pacote</p>
-            <p>Informações</p>
-            <p>Valor</p>
-        </div>
+    
     </div>
 
-    <!-- Botão flutuante do carrinho -->
-    <button class="carrinho">
-        <i class="fa-solid fa-cart-shopping"><img src="../DAO/img/carrinho2-removebg-preview.png" style="height: 50px; width: 50px;" alt=""></i>
+
+   <!-- Botão flutuante do carrinho -->
+    <button class="carrinho" id="btnCarrinho">
+    <img src="../DAO/img/carrinho2-removebg-preview.png" style="height: 36px; width: 36px;" alt="carrinho">
     </button>
 
-    
+    <!-- Modal do Carrinho -->
+    <div id="modalCarrinho" class="modal" aria-hidden="true">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Carrinho de Compras</h2>
+
+        <div class="carrinho-opcoes">
+        <h3>Opções de Reserva</h3>
+        <div id="hotelList"><p>Nenhum hotel adicionado.</p></div>
+        <div id="passagemList"><p>Nenhuma passagem adicionada.</p></div>
+        <div id="passeioList"><p>Nenhum passeio adicionado.</p></div>
+        </div>
+
+        <div class="carrinho-pacotes">
+        <h3>Pacotes</h3>
+        <div id="pacoteList"><p>Nenhum pacote adicionado.</p></div>
+        </div>
+
+        <!-- botão fechar -->
+        <div style="margin-top:14px; text-align:right;">
+        <button id="fecharModal" class="btn-btn-primary">Fechar</button>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="../DAO/js/carrinho.js"></script>
+    <script src="../DAO/js/pacotes/dadosPacotes.js"></script>
+    <script src="../DAO/js/perfil.js"></script>
 </body>
 </html>

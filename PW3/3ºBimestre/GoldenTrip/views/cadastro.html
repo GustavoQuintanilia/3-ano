@@ -1,77 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>goldentrip.com</title>
-    <link rel="stylesheet" href="../DAO/css/tela_Cadastro/header.css">
+
     <link rel="stylesheet" href="../DAO/css/tela_Cadastro/body.css">
-    <link rel="stylesheet" href="../DAO/css/tela_Cadastro/footer.css">
-    <!--link do Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container" style="padding: 0%;">
-        <div class="img">
-            <img src="../DAO/img/oi.jpg" class="img-fluid" alt="...">
+    <div class="cadastro-container">
+
+        <!-- imagem -->
+        <div class="cadastro-img">
+            <img src="../DAO/img/oi.jpg" alt="Imagem avião">
         </div>
 
-        <!--Forms--> 
-        <div class="cadastrar" style="width: 700px; height: 800px; padding-top: 20px;">
-            <!--FORMS--> 
-            <div class="forms" style="width: 50%; text-align: center; padding-left: 10px; padding-right: 10px;">
-                <div class="topo" style="width: 300px;">             
-                    <h2 style="margin-top: 10px; margin-bottom: 10px;">CADASTRE-SE</h2>
+        <!-- formulário -->
+        <div class="cadastro-form">
+            <h2>CADASTRE-SE</h2>
+
+            <form action="/cadastro" method="POST">
+
+                <div class="campo">
+                    <label>Nome completo:</label>
+                    <input type="text" name="nome" required>
                 </div>
 
-                <form action="/cadastro" method="POST">
-                    <!--Nome-->
-                    <div class="campos">
-                        <label style="display: block;">Nome completo:</label>
-                        <input type="text" name="nome" required style="width: 330px; height: 30px;">
-                    </div>
+                <div class="campo">
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+                </div>
 
-                    <!--Email-->
-                    <div class="campos">
-                        <label style="display: block;">Email:</label>
-                        <input type="email" name="email" required style="width: 330px; height: 30px;">
+            <div class="campo">
+                    <label>Senha:</label>
+                    <div class="input-eye">
+                        <input type="password" name="senha" id="senha-cadastro" required>
+                        <span class="eye-toggle" id="toggleSenhaCadastro"></span>
                     </div>
+                </div>
 
-                    <!--Senha-->
-                    <div class="campos">
-                        <label style="display: block;">Senha:</label>
-                        <input type="password" name="senha" required style="width: 330px; height: 30px;">
+                <div class="campo">
+                    <label>Confirmar senha:</label>
+                    <div class="input-eye">
+                        <input type="password" name="confirmarSenha" id="confirmar-senha" required>
+                        <span class="eye-toggle" id="toggleConfirmarSenha"></span>
                     </div>
+                </div>
 
-                    <!--Confirmar Senha-->
-                    <div class="campos">
-                        <label style="display: block;">Confirmar senha:</label>
-                        <input type="password" name="confirmarSenha" required style="width: 330px; height: 30px;">
-                    </div>
 
-                    <!--Data de nascimento-->
-                    <div class="campos">
-                        <label style="display: block;">Data de nascimento:</label>
-                        <input type="date" name="dataNascimento" required style="width: 330px; height: 30px;">
-                    </div>
+                <div class="campo">
+                    <label>Data de nascimento:</label>
+                    <input type="date" name="dataNascimento" required>
+                </div>
 
-                    <div style="margin-top: 40px;">
-                        <button type="submit" style="color: #000; border-radius: 15px; background-color: #DCDCDC; font-size: 20px; width: 60%; height: 10%; margin-left: 27%; margin-right: 27%;">Cadastre-se</button>
-                    </div>
-                </form>
-                <a href="index.html" style="text-decoration: none;">Voltar</a>
-        
-            </div>
+                <button class="btn-cadastrar" type="submit">Cadastrar</button>
+            </form>
+
+            <a class="voltar" href="index.html">Voltar</a>
         </div>
     </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const mensagem = params.get("mensagem");
-            if (mensagem) {
-                alert(mensagem);
-                window.history.replaceState({}, document.title, window.location.pathname);
-            }   
-  </script>
+        const msg = params.get("mensagem");
+        if(msg){
+            alert(msg);
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        // Senha principal
+        const senhaCadastro = document.getElementById("senha-cadastro");
+        const toggleSenha = document.getElementById("toggleSenhaCadastro");
+        toggleSenha.addEventListener("click", () => {
+            if (senhaCadastro.type === "password") {
+                senhaCadastro.type = "text";
+                toggleSenha.classList.add("active");
+            } else {
+                senhaCadastro.type = "password";
+                toggleSenha.classList.remove("active");
+            }
+        });
+
+        // Confirmar senha
+        const confirmarSenha = document.getElementById("confirmar-senha");
+        const toggleConfirmar = document.getElementById("toggleConfirmarSenha");
+        toggleConfirmar.addEventListener("click", () => {
+            if (confirmarSenha.type === "password") {
+                confirmarSenha.type = "text";
+                toggleConfirmar.classList.add("active");
+            } else {
+                confirmarSenha.type = "password";
+                toggleConfirmar.classList.remove("active");
+            }
+        });
+
+    </script>
+
 </body>
 </html>

@@ -1,345 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoldenTrip</title>
-    <link rel="stylesheet" href="../DAO/css/tela_Opcoes/body.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>goldentrip.com</title>
+
+  <!-- seu CSS -->
+  <link rel="stylesheet" href="../DAO/css/tela_Opcoes/body.css">
+  <link rel="stylesheet" href="../DAO/css/carrinho.css">
+  <link rel="stylesheet" href="../DAO/css/perfil.css">
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* pequenos ajustes para cards modernos mantendo sua paleta */
+    .card {
+      overflow: hidden;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      border-width: 2px;
+      border-color: rgba(0,0,0,0.12);
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+    .card .card-body { padding: 14px; }
+    .card .card-text { height: 48px; overflow: hidden; color: #444; }
+    .card .preco { font-weight: 700; color: #1E90FF; margin-top: 8px; display:block; }
+    .btn-btn-primary { background-color: #FF7F50; color: #fff; border-radius: 8px; padding: 8px 14px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
+    .btn-btn-primary:hover { background-color:#ff6e36; }
+    .container-cards { width:100%; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-           <div class="logo">GoldenTrip</div>
-           <ul class="menu">
-               <li><a href="/home.html" >HOME</a></li>
-               <li><a href="/pacotes.html">PACOTES</a></li>
-               <li><a href="/opcoes_Reserva.html" class="active">OPÇÕES DE RESERVAS</a></li>
-               <li><a href="#">RESERVAS</a></li>
-           </ul>
-       </nav>
-   </header>
+<header>
+  <nav>
+    <div class="logo">GoldenTrip</div>
+    <ul class="menu">
+      <li><a href="/home" >HOME</a></li>
+      <li><a href="/pacotes">PACOTES</a></li>
+      <li><a href="/opcoes_Reserva" class="active">OPÇÕES DE RESERVAS</a></li>
+      <li><a href="/reservas">RESERVAS</a></li>
+    </ul>
+  </nav>
+</header>
 
     <!-- Ícone do perfil -->
-    <div class="perfil">
-        <i class="fa-solid fa-user"><img src="../DAO/img/painel_do_viajante.png" style="height: 50px; width: 50px; border-radius: 100%;" alt=""></i>
-    </div>
+    <a href="/painelViajante.html">
+        <div class="perfil" id="iconePerfil">
+            <img id="fotoPerfilIcone" src="../DAO/img/painel_do_viajante.png" alt="Perfil">
+        </div>
+    </a>
 
-   <!-- container principal -->
-<main class="reservas-container" style="margin-top: 50px;">
-    <!-- Abas de navegação -->
-    <!-- Abas de navegação -->
-<div class="abas">
+<main class="reservas-container">
+  <div class="abas">
     <button class="aba-item" data-aba="passagens">Passagens</button>
     <button class="aba-item active" data-aba="hoteis">Hotéis</button>
     <button class="aba-item" data-aba="passeios">Passeios</button>
-</div>
+  </div>
 
+<!-- ABA: PASSAGENS -->
+  <section id="conteudo-passagens" class="conteudo-aba">
+    <div id="passagemContainer" class="container-cards">
 
-    <!-- Conteúdo das abas -->
-    <div id="conteudo-passagens" class="conteudo-aba">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://aeroin.net/wp-content/uploads/2025/09/A321neo-Airbus-1024x683.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
     </div>
+  </section>
 
-    <div id="conteudo-hoteis" class="conteudo-aba active">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-    </div>
+   <!-- ABA: HOTEIS -->
+  <section id="conteudo-hoteis" class="conteudo-aba active">
+    <div id="hotelContainer" class="container-cards">
 
-    <div id="conteudo-passeios" class="conteudo-aba">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/06/30/1344695143-border-collie.jpg" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-              <a href="#" class="btn-btn-primary">Visitar</a>
-            </div>
-          </div>
     </div>
+  </section>
+
+  <!-- ABA: PASSEIOS -->
+  <section id="conteudo-passeios" class="conteudo-aba">
+    <div id="passeioContainer" class="container-cards">
+
+    </div>
+  </section>
 </main>
 
-    <!-- Botão flutuante do carrinho -->
-    <button class="carrinho">
-        <i class="fa-solid fa-cart-shopping"><img src="../DAO/img/carrinho2-removebg-preview.png" style="height: 50px; width: 50px;" alt=""></i>
-    </button>
+<!-- Botão flutuante do carrinho -->
+<button class="carrinho" id="btnCarrinho">
+  <img src="../DAO/img/carrinho2-removebg-preview.png" style="height: 36px; width: 36px;" alt="carrinho">
+</button>
 
-<script src="../DAO/js/opcoes_Reserva.js"></script>
+<!-- Modal do Carrinho -->
+<div id="modalCarrinho" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Carrinho de Compras</h2>
 
+    <div class="carrinho-opcoes">
+      <h3>Opções de Reserva</h3>
+      <div id="hotelList"><p>Nenhum hotel adicionado.</p></div>
+      <div id="passagemList"><p>Nenhuma passagem adicionada.</p></div>
+      <div id="passeioList"><p>Nenhum passeio adicionado.</p></div>
+    </div>
+
+    <div class="carrinho-pacotes">
+      <h3>Pacotes</h3>
+      <div id="pacoteList"><p>Nenhum pacote adicionado.</p></div>
+    </div>
+
+    <!-- botão fechar -->
+    <div style="margin-top:14px; text-align:right;">
+      <button id="fecharModal" class="btn-btn-primary">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="/DAO/js/opcoes_Reserva/opcoes_Reserva.js" defer></script>
+<script src="/DAO/js/carrinho.js" defer></script>
+<script src="/DAO/js/opcoes_Reserva/dadosReservas.js" defer></script>
+<script src="../DAO/js/perfil.js"></script>
 </body>
 </html>

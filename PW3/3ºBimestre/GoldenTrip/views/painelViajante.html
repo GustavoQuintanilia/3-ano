@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../DAO/css/tela_ PainelViajante/header.css">
+    <link rel="stylesheet" href="../DAO/css/tela_ PainelViajante/body.css">
+    <link rel="stylesheet" href="../DAO/css/tela_ PainelViajante/cards.css">
+    <title>goldentrip.com</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GoldenTrip</div>
+            <ul class="menu">
+                <li><a href="/home.html" >HOME</a></li>
+                <li><a href="/pacotes.html">PACOTES</a></li>
+                <li><a href="/opcoes_Reserva.html">OPÇÕES DE RESERVAS</a></li>
+                <li><a href="/reservas.html">RESERVAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="painel-container">
+    <h1>Painel do Viajante</h1>
+
+    <section class="card-perfil">
+      <div class="perfil-header">
+        <div class="foto-perfil" id="fotoPerfil"></div>
+        <div class="info-usuario">
+          <h2 id="nomeUsuario">Nome do viajante</h2>
+          <p id="emailUsuario">email@exemplo.com</p>
+        </div>
+        <div class="botoes">
+          <button id="btnEditar">Editar</button>
+          <button id="btnSair">Sair</button>
+
+            <!-- NOVO BOTÃO DE MENU -->
+          <div class="menu-opcoes">
+            <button id="btnMenuOpcoes" class="btn-tres-pontos">⋮</button>
+
+            <!-- MENU DROPDOWN -->
+            <div id="dropdownOpcoes" class="dropdown-opcoes">
+              <button id="btnDeletarConta" class="deletar">Deletar conta</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="areaReservas" class="area-reservas">
+        <h2>Minhas Reservas</h2>
+        <div id="listaReservas" class="lista-reservas">
+           
+        </div>
+    </section>
+
+  </main>
+
+   <!-- Modal Edição -->
+  <div id="modalEditar" class="modal">
+    <div class="modal-content">
+      <h2>Editar Perfil</h2>
+      <form id="formEditarPerfil" enctype="multipart/form-data">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Seu nome">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Seu email">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" placeholder="********">
+
+        <label for="fotoPerfilInput">Foto de Perfil:</label>
+        <input type="file" id="fotoPerfilInput" name="fotoPerfil" accept="image/*">
+
+        <img id="previewFoto" src="" alt="Prévia da Foto" width="100" style="display:none; border-radius:50%; margin-top:10px;">
+
+        <div class="botoes-modal">
+          <button type="submit" id="btnSalvarAlteracoes">Salvar</button>
+          <button type="button" id="btnFecharModal">Fechar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="../DAO/js/painelViajante/painelViajante.js"></script>
+  <script src="../DAO/js/painelViajante/editarPerfil.js"></script>
+  <script src="../DAO/js/painelViajante/cardsReserva.js"></script>
+  <script src="../DAO/js/painelViajante/deletarUsuario.js"></script>
+</body>
+</html>
