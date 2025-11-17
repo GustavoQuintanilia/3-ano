@@ -1,66 +1,92 @@
-
-/* Grid de pacotes */
-.container-pacotes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-top: 60px;
+body{
+    background: #f0f0f0;
 }
 
-/* Cada cartão */
+/* Container dos pacotes */
+.container-pacotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+/* Card de pacote */
 .pacote {
-    width: 180px;
-    background-color: #d9d9d9;
-    border-radius: 6px;
-    box-shadow: 3px 4px 8px rgba(0,0,0,0.2);
-    text-align: center;
-    padding-bottom: 10px;
-    transition: transform 0.2s;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* garante alinhamento do botão */
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 420px; /* define altura padrão */
 }
 
 .pacote:hover {
-    transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Área da imagem */
 .pacote .imagem {
-    background-color: white;
-    border: 2px solid black;
-    height: 60px;
-    line-height: 60px;
-    margin-bottom: 10px;
-    font-weight: bold;
+  flex-shrink: 0;
 }
 
-/* Texto */
+.pacote .imagem img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.pacote .nome {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 12px 16px 8px 16px;
+  color: #333;
+}
+
 .pacote p {
-    margin: 5px 0;
-    font-size: 15px;
-    font-weight: bold;
-    color: #000;
+  font-size: 14px;
+  margin: 0 16px 8px 16px;
+  color: #555;
+  flex-grow: 1; /* faz o texto ocupar espaço sem empurrar o botão */
 }
 
-/* Botão do carrinho flutuante */
-.carrinho {
-    position: fixed;
-    bottom: 20px;
-    right: 25px;
-    background-color: #ffeb00;
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.2s;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pacote p strong {
+  color: #222;
 }
 
-.carrinho:hover {
-    transform: scale(1.1);
+.pacote .btn-adicionar {
+  margin: 12px 16px 16px 16px;
+  padding: 10px;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.pacote .btn-adicionar:hover {
+  background-color: #005fa3;
+}
+
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+  .pacote .nome {
+    font-size: 16px;
+  }
+
+  .pacote p {
+    font-size: 13px;
+  }
+
+  .pacote .btn-adicionar {
+    font-size: 13px;
+    padding: 8px;
+  }
 }
